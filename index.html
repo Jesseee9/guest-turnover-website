@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Airbnb and holiday let cleaning services in Hull and East Yorkshire. Expert turnover cleaning for property hosts.">
-    <title>Guest Turnover Solutions | Professional Property Cleaning in Hull</title>
+    <meta name="description" content="Professional Airbnb turnover and home cleaning services in Hull and East Yorkshire. Transparent pricing, reliable service. Book via WhatsApp.">
+    <meta name="keywords" content="Airbnb cleaning Hull, holiday let cleaning, home cleaning Hull, turnover cleaning, East Yorkshire cleaning service">
+    <title>Guest Turnover Solutions | Professional Cleaning Services in Hull</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ============================================
-           CSS VARIABLES - Easy to customise colours
-           ============================================ */
         :root {
-            --primary: #0369a1;
-            --primary-dark: #075985;
-            --primary-light: #e0f2fe;
-            --secondary: #059669;
-            --secondary-light: #d1fae5;
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --primary-light: #dbeafe;
+            --secondary: #0d9488;
+            --secondary-light: #ccfbf1;
+            --accent: #25D366;
             --dark: #0f172a;
             --dark-light: #334155;
             --grey: #64748b;
             --grey-light: #f1f5f9;
             --white: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
         }
 
-        /* ============================================
-           RESET & BASE STYLES
-           ============================================ */
         * {
             margin: 0;
             padding: 0;
@@ -42,62 +42,63 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 16px;
             line-height: 1.6;
             color: var(--dark);
-            background-color: var(--white);
+            background: var(--white);
+            overflow-x: hidden;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* ============================================
-           UTILITY CLASSES
-           ============================================ */
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
             font-weight: 700;
-            text-align: center;
-            margin-bottom: 16px;
-            color: var(--dark);
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--grey);
-            max-width: 600px;
-            margin: 0 auto 48px auto;
-        }
-
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 32px;
+            gap: 8px;
+            padding: 14px 28px;
             font-size: 1rem;
             font-weight: 600;
+            text-decoration: none;
             border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.3s ease;
             border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-whatsapp {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20bd5a;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
         }
 
         .btn-primary {
@@ -108,50 +109,43 @@
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
-        .btn-secondary {
-            background: var(--white);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-light);
-        }
-
-        /* ============================================
-           NAVIGATION
-           ============================================ */
+        /* Navigation */
         .nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            box-shadow: var(--shadow);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 24px;
+            padding: 16px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
         }
 
-        .nav-logo span {
-            color: var(--secondary);
+        .nav-logo svg {
+            width: 32px;
+            height: 32px;
+            color: var(--primary);
         }
 
         .nav-links {
@@ -162,9 +156,11 @@
         }
 
         .nav-links a {
+            font-size: 0.95rem;
             font-weight: 500;
             color: var(--dark-light);
-            transition: color 0.3s ease;
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
@@ -172,11 +168,10 @@
         }
 
         .nav-cta {
-            padding: 10px 20px;
-            font-size: 0.9rem;
+            padding: 10px 20px !important;
+            font-size: 0.9rem !important;
         }
 
-        /* Mobile menu button */
         .nav-toggle {
             display: none;
             flex-direction: column;
@@ -192,23 +187,19 @@
             height: 2px;
             background: var(--dark);
             border-radius: 2px;
+            transition: all 0.3s;
         }
 
-        /* ============================================
-           HERO SECTION
-           ============================================ */
+        /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 50%, var(--secondary-light) 100%);
-            padding-top: 80px;
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, var(--grey-light) 0%, var(--white) 100%);
         }
 
-        .hero-container {
+        .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            gap: 60px;
             align-items: center;
         }
 
@@ -216,34 +207,21 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--white);
+            background: var(--secondary-light);
+            color: var(--secondary);
             padding: 8px 16px;
             border-radius: 50px;
             font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--secondary);
-            box-shadow: var(--shadow);
-            margin-bottom: 24px;
-        }
-
-        .hero-badge::before {
-            content: "✓";
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            background: var(--secondary-light);
-            border-radius: 50%;
-            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            font-size: 3.25rem;
+            font-weight: 800;
             color: var(--dark);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
 
         .hero-title span {
@@ -251,10 +229,10 @@
         }
 
         .hero-description {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--grey);
             margin-bottom: 32px;
-            max-width: 500px;
+            max-width: 520px;
         }
 
         .hero-buttons {
@@ -263,100 +241,138 @@
             flex-wrap: wrap;
         }
 
-        .hero-visual {
-            position: relative;
-        }
-
         .hero-image {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow-lg);
         }
 
-        .hero-icon {
-            font-size: 8rem;
+        .hero-visual {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero-visual svg {
+            width: 50%;
+            height: 50%;
+            color: white;
             opacity: 0.9;
         }
 
-        .hero-stats {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
+        /* Trust Bar */
+        .trust-bar {
+            padding: 40px 0;
             background: var(--white);
-            padding: 20px 28px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
+            border-bottom: 1px solid var(--grey-light);
         }
 
-        .hero-stats-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
         }
 
-        .hero-stats-label {
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--grey);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .trust-item svg {
+            width: 24px;
+            height: 24px;
+            color: var(--secondary);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .section-label {
+            display: inline-block;
             font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
             color: var(--grey);
         }
 
-        /* ============================================
-           SERVICES SECTION
-           ============================================ */
+        /* Services Section */
         .services {
             background: var(--grey-light);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 32px;
         }
 
         .service-card {
             background: var(--white);
+            border-radius: var(--radius-xl);
             padding: 40px;
-            border-radius: var(--radius);
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
-        .service-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-
         .service-icon {
-            width: 64px;
-            height: 64px;
+            width: 56px;
+            height: 56px;
             background: var(--primary-light);
-            border-radius: var(--radius);
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.75rem;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--primary);
         }
 
         .service-title {
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 12px;
             color: var(--dark);
         }
@@ -368,7 +384,6 @@
 
         .service-features {
             list-style: none;
-            margin-bottom: 24px;
         }
 
         .service-features li {
@@ -380,135 +395,344 @@
             font-size: 0.95rem;
         }
 
-        .service-features li::before {
-            content: "✓";
+        .service-features svg {
+            width: 18px;
+            height: 18px;
             color: var(--secondary);
-            font-weight: 700;
+            flex-shrink: 0;
         }
 
-        .service-price {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary);
+        /* Pricing Section */
+        .pricing {
+            background: var(--white);
         }
 
-        .service-price span {
-            font-size: 0.875rem;
-            font-weight: 400;
-            color: var(--grey);
-        }
-
-        /* ============================================
-           WHY CHOOSE US SECTION
-           ============================================ */
-        .features-grid {
+        .pricing-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .pricing-main {
+            background: var(--grey-light);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 32px;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            text-align: left;
+            padding: 16px 20px;
+        }
+
+        .pricing-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .pricing-table th:first-child {
+            border-radius: var(--radius) 0 0 0;
+        }
+
+        .pricing-table th:last-child {
+            border-radius: 0 var(--radius) 0 0;
+            text-align: right;
+        }
+
+        .pricing-table td {
+            background: var(--white);
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .pricing-table td:last-child {
+            text-align: right;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .pricing-table tr:last-child td:first-child {
+            border-radius: 0 0 0 var(--radius);
+        }
+
+        .pricing-table tr:last-child td:last-child {
+            border-radius: 0 0 var(--radius) 0;
+        }
+
+        .pricing-included h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .pricing-included ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .pricing-included li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--dark-light);
+        }
+
+        .pricing-included svg {
+            width: 18px;
+            height: 18px;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .pricing-addons {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-addons h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .addon-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .addon-item:last-child {
+            border-bottom: none;
+        }
+
+        .addon-name {
+            font-weight: 500;
+            color: var(--dark-light);
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--grey-light);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 32px;
         }
 
-        .feature-card {
+        .why-us-card {
             text-align: center;
             padding: 32px 24px;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow);
         }
 
-        .feature-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+        .why-us-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-light);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 20px;
         }
 
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 12px;
+        .why-us-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--primary);
+        }
+
+        .why-us-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
             color: var(--dark);
         }
 
-        .feature-description {
+        .why-us-text {
+            font-size: 0.9rem;
             color: var(--grey);
-            font-size: 0.95rem;
         }
 
-        /* ============================================
-           SERVICE AREA SECTION
-           ============================================ */
-        .area {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
+        /* Testimonials */
+        .testimonials {
+            background: var(--white);
         }
 
-        .area .section-title {
-            color: var(--white);
-        }
-
-        .area .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .area-content {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
-        .area-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            list-style: none;
+        .testimonial-card {
+            background: var(--grey-light);
+            border-radius: var(--radius-xl);
+            padding: 32px;
         }
 
-        .area-list li {
+        .testimonial-stars {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius);
-            backdrop-filter: blur(10px);
-        }
-
-        .area-list li::before {
-            content: "📍";
-        }
-
-        .area-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: var(--radius);
-            backdrop-filter: blur(10px);
-        }
-
-        .area-info h3 {
-            font-size: 1.5rem;
+            gap: 4px;
             margin-bottom: 16px;
         }
 
-        .area-info p {
-            opacity: 0.9;
-            margin-bottom: 24px;
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            color: #fbbf24;
+            fill: #fbbf24;
         }
 
-        /* ============================================
-           CONTACT SECTION
-           ============================================ */
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--dark-light);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .testimonial-location {
+            font-size: 0.875rem;
+            color: var(--grey);
+        }
+
+        /* Service Areas */
+        .areas {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .areas .section-label {
+            color: var(--primary-light);
+        }
+
+        .areas .section-title {
+            color: var(--white);
+        }
+
+        .areas .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .area-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 14px 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s;
+        }
+
+        .area-tag:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--grey-light);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+        }
+
+        .faq-question:hover {
+            background: var(--grey-light);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            color: var(--grey);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--grey);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 60px;
         }
 
         .contact-info h3 {
             font-size: 1.75rem;
+            font-weight: 700;
             margin-bottom: 16px;
+            color: var(--dark);
         }
 
         .contact-info > p {
@@ -526,38 +750,41 @@
         .contact-icon {
             width: 48px;
             height: 48px;
-            background: var(--primary-light);
+            background: var(--grey-light);
             border-radius: var(--radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
             flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--primary);
         }
 
         .contact-text h4 {
             font-weight: 600;
             margin-bottom: 4px;
+            color: var(--dark);
         }
 
-        .contact-text p {
-            color: var(--grey);
-        }
-
+        .contact-text p,
         .contact-text a {
-            color: var(--primary);
-            font-weight: 500;
+            color: var(--grey);
+            text-decoration: none;
         }
 
         .contact-text a:hover {
-            text-decoration: underline;
+            color: var(--primary);
         }
 
         .contact-cta {
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-xl);
             padding: 48px;
-            border-radius: var(--radius);
-            text-align: center;
+            color: var(--white);
         }
 
         .contact-cta h3 {
@@ -566,37 +793,46 @@
         }
 
         .contact-cta p {
-            color: var(--grey);
+            opacity: 0.9;
             margin-bottom: 24px;
         }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
+        .contact-cta .btn-whatsapp {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
         .footer {
             background: var(--dark);
             color: var(--white);
-            padding: 48px 0 24px 0;
+            padding: 48px 0 24px;
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 24px;
             flex-wrap: wrap;
             gap: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 24px;
         }
 
         .footer-logo {
-            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
             font-weight: 700;
         }
 
-        .footer-logo span {
-            color: var(--secondary);
+        .footer-logo svg {
+            width: 28px;
+            height: 28px;
+            color: var(--primary-light);
         }
 
         .footer-links {
@@ -606,8 +842,10 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: color 0.3s ease;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
         }
 
         .footer-links a:hover {
@@ -616,38 +854,71 @@
 
         .footer-bottom {
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255,255,255,0.5);
             font-size: 0.875rem;
         }
 
-        /* ============================================
-           RESPONSIVE DESIGN
-           ============================================ */
-        @media (max-width: 968px) {
-            .hero-container {
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
             .hero-description {
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto 32px;
             }
 
             .hero-buttons {
                 justify-content: center;
             }
 
-            .hero-visual {
+            .hero-image {
                 display: none;
             }
 
-            .area-content {
+            .pricing-wrapper {
                 grid-template-columns: 1fr;
+            }
+
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .contact-grid {
@@ -664,6 +935,14 @@
                 display: flex;
             }
 
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
             .section {
                 padding: 60px 0;
             }
@@ -672,17 +951,20 @@
                 font-size: 1.75rem;
             }
 
-            .hero {
-                min-height: auto;
-                padding: 120px 0 80px 0;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .area-list {
+            .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .pricing-included ul {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .footer-content {
@@ -695,43 +977,34 @@
                 justify-content: center;
             }
         }
-
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content > * {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .hero-badge { animation-delay: 0.1s; }
-        .hero-title { animation-delay: 0.2s; }
-        .hero-description { animation-delay: 0.3s; }
-        .hero-buttons { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Guest Turnover <span>Solutions</span></a>
+            <a href="#" class="nav-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Guest Turnover Solutions
+            </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#area">Areas</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#areas">Areas</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://outlook.office.com/book/GuestTurnoverSolutions1@guestturnoversolutions.co.uk/" class="btn btn-primary nav-cta" target="_blank">Book Now</a></li>
+                <li>
+                    <a href="https://wa.me/447931465509" class="btn btn-whatsapp nav-cta" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -741,213 +1014,344 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">Trusted by Property Hosts in Hull</div>
-                    <h1 class="hero-title">Professional <span>Turnover Cleaning</span> for Airbnb & Holiday Lets</h1>
-                    <p class="hero-description">We ensure your property is spotless and guest-ready between every stay. Reliable, thorough, and hassle-free cleaning services in Hull and East Yorkshire.</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Trusted in Hull & East Yorkshire
+                    </div>
+                    <h1 class="hero-title">Professional <span>Cleaning</span> for Airbnb & Homes</h1>
+                    <p class="hero-description">Reliable turnover cleaning for holiday lets and thorough home cleaning services. Transparent pricing, no hidden fees, and quality you can count on.</p>
                     <div class="hero-buttons">
-                        <a href="https://outlook.office.com/book/GuestTurnoverSolutions1@guestturnoversolutions.co.uk/" class="btn btn-primary" target="_blank">Book a Clean</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                        <a href="https://wa.me/447931465509" class="btn btn-whatsapp" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Message on WhatsApp
+                        </a>
+                        <a href="tel:07931465509" class="btn btn-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Call Us
+                        </a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="hero-image">
-                        <span class="hero-icon">🏠✨</span>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="hero-stats-number">100%</div>
-                        <div class="hero-stats-label">Satisfaction Guaranteed</div>
+                <div class="hero-image">
+                    <div class="hero-visual">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section class="services section" id="services">
+    <!-- Trust Bar -->
+    <section class="trust-bar">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Tailored cleaning solutions to keep your property in perfect condition for every guest.</p>
-            
+            <div class="trust-items">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Transparent Pricing
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Reliable & Professional
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Quality Guaranteed
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Fast Response
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">Whether you're an Airbnb host needing turnover cleans or a homeowner wanting regular cleaning, we've got you covered.</p>
+            </div>
             <div class="services-grid">
-                <!-- Standard Turnover -->
                 <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3 class="service-title">Standard Turnover Clean</h3>
-                    <p class="service-description">Complete property reset between guest stays. Everything your guests need for a 5-star arrival experience.</p>
-                    <ul class="service-features">
-                        <li>Full bathroom sanitisation</li>
-                        <li>Kitchen cleaning & reset</li>
-                        <li>Fresh bed linen service</li>
-                        <li>Vacuuming & mopping throughout</li>
-                        <li>Surface dusting & polishing</li>
-                        <li>Bin emptying & rubbish removal</li>
-                    </ul>
-                    <div class="service-price">From £60 <span>/ 2 hours</span></div>
-                </div>
-
-                <!-- Deep Clean -->
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3 class="service-title">Deep Clean</h3>
-                    <p class="service-description">Thorough intensive cleaning for seasonal refreshes, post-renovation, or when your property needs extra attention.</p>
-                    <ul class="service-features">
-                        <li>Everything in Standard Clean</li>
-                        <li>Oven & hob deep clean</li>
-                        <li>Fridge interior cleaning</li>
-                        <li>Window cleaning (interior)</li>
-                        <li>Skirting boards & detailed areas</li>
-                        <li>Limescale removal</li>
-                    </ul>
-                    <div class="service-price">From £120 <span>/ 4 hours</span></div>
-                </div>
-
-                <!-- Laundry Service -->
-                <div class="service-card">
-                    <div class="service-icon">🛏️</div>
-                    <h3 class="service-title">Linen Service</h3>
-                    <p class="service-description">Fresh, professionally laundered linens delivered and fitted, ready for your next guests.</p>
-                    <ul class="service-features">
-                        <li>Fresh bed sheets & pillowcases</li>
-                        <li>Clean towel sets</li>
-                        <li>Professional laundering</li>
-                        <li>Crisp, hotel-quality finish</li>
-                        <li>Beds made to perfection</li>
-                        <li>Towels artfully arranged</li>
-                    </ul>
-                    <div class="service-price">From £25 <span>/ per bedroom</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section class="section" id="why-us">
-        <div class="container">
-            <h2 class="section-title">Why Property Hosts Choose Us</h2>
-            <p class="section-subtitle">We understand the demands of short-term rentals and deliver the reliability you need.</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h3 class="feature-title">Flexible Scheduling</h3>
-                    <p class="feature-description">Book online 24/7. We work around your guest checkout and check-in times.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3 class="feature-title">Detailed Checklists</h3>
-                    <p class="feature-description">Every clean follows our comprehensive checklist so nothing gets missed.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3 class="feature-title">Clear Communication</h3>
-                    <p class="feature-description">Instant booking confirmations and notifications when your property is guest-ready.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3 class="feature-title">5-Star Standards</h3>
-                    <p class="feature-description">We clean to the standards that earn you those all-important 5-star reviews.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICE AREA -->
-    <section class="area section" id="area">
-        <div class="container">
-            <h2 class="section-title">Service Area</h2>
-            <p class="section-subtitle">Proudly serving property hosts across Hull and East Yorkshire.</p>
-
-            <div class="area-content">
-                <ul class="area-list">
-                    <li>Hull City Centre</li>
-                    <li>Anlaby</li>
-                    <li>Hessle</li>
-                    <li>Cottingham</li>
-                    <li>Beverley</li>
-                    <li>Willerby</li>
-                    <li>Brough</li>
-                    <li>Surrounding Areas</li>
-                </ul>
-
-                <div class="area-info">
-                    <h3>Not Sure If We Cover Your Area?</h3>
-                    <p>We're always happy to discuss properties outside our usual coverage. Get in touch and we'll do our best to help.</p>
-                    <a href="#contact" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to make your property shine? We'd love to hear from you.</p>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Reach out directly or use our online booking system to schedule your clean.</p>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <p><a href="mailto:info@guestturnoversolutions.co.uk">info@guestturnoversolutions.co.uk</a></p>
-                        </div>
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
                     </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Hull, East Yorkshire, UK</p>
-                        </div>
+                    <h3 class="service-title">Airbnb & Holiday Let Turnovers</h3>
+                    <p class="service-description">Quick, thorough cleaning between guest stays. We ensure your property is spotless and ready to impress your next guests.</p>
+                    <ul class="service-features">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Full property clean
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Bathroom sanitisation
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Kitchen deep clean
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Quality check & reporting
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path>
+                        </svg>
                     </div>
+                    <h3 class="service-title">Home Cleaning</h3>
+                    <p class="service-description">Regular or one-off cleaning for your home. Same professional service, same transparent pricing.</p>
+                    <ul class="service-features">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            All rooms cleaned
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Bathroom sanitisation
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Kitchen deep clean
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Flexible scheduling
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">🕐</div>
-                        <div class="contact-text">
-                            <h4>Working Hours</h4>
-                            <p>Monday - Saturday: 8am - 6pm</p>
-                        </div>
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Transparent Pricing</span>
+                <h2 class="section-title">Simple, Clear Prices</h2>
+                <p class="section-subtitle">No hidden fees, no surprises. Just honest pricing based on your property size.</p>
+            </div>
+            <div class="pricing-wrapper">
+                <div class="pricing-main">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Property Size</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Studio / 1-Bedroom</td>
+                                <td>£40</td>
+                            </tr>
+                            <tr>
+                                <td>2-Bedroom</td>
+                                <td>£60</td>
+                            </tr>
+                            <tr>
+                                <td>3-Bedroom</td>
+                                <td>£80</td>
+                            </tr>
+                            <tr>
+                                <td>4+ Bedroom</td>
+                                <td>£100+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pricing-included">
+                        <h4>Every Clean Includes:</h4>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Full property clean
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Bathroom sanitisation
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Kitchen deep clean
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Rubbish removal
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Quality check & reporting
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="contact-cta">
-                    <h3>Ready to Book?</h3>
-                    <p>Use our online booking system to check availability and schedule your clean in minutes.</p>
-                    <a href="https://outlook.office.com/book/GuestTurnoverSolutions1@guestturnoversolutions.co.uk/" class="btn btn-primary" target="_blank">Book Online Now</a>
+                <div class="pricing-addons">
+                    <h4>Add-On Services</h4>
+                    <div class="addon-item">
+                        <span class="addon-name">Linen & Laundry Service</span>
+                        <span class="addon-price">+£18</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">Deep Clean</span>
+                        <span class="addon-price">+£30</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">Same-Day Service<br><small style="color: var(--grey); font-weight: 400;">(under 4hr notice)</small></span>
+                        <span class="addon-price">+£10</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <!-- Why Choose Us -->
+    <section class="section why-us" id="why-us">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Guest Turnover <span>Solutions</span></div>
-                <ul class="footer-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-us">Why Us</a></li>
-                    <li><a href="#area">Areas</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">The Guest Turnover Difference</h2>
+                <p class="section-subtitle">We're not just cleaners. We're your partners in creating great guest experiences.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Guest Turnover Solutions. All rights reserved. | Professional Cleaning for Airbnb & Holiday Lets in Hull</p>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h4 class="why-us-title">Reliable & Punctual</h4>
+                    <p class="why-us-text">We understand tight turnaround times. Count on us to be there when you need us.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="why-us-title">Quality Focused</h4>
+                    <p class="why-us-text">Every clean follows our detailed checklist. Nothing gets missed.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="why-us-title">Transparent Pricing</h4>
+                    <p class="why-us-text">Clear prices upfront. No hidden fees or surprise charges.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="why-us-title">Great Communication</h4>
+                    <p class="why-us-text">Quick responses on WhatsApp. We keep you informed every step of the way.</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-</body>
-</html>
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                    </div>
+                    <p class="testimonial-text">"Excellent service. Property was spotless and ready well before my guests arrived. Couldn't ask for more."</p>
+                    <p class="testimonial-author">Sarah</p>
+                    <p class="testimonial-location">Anlaby</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                    </div>
+                    <p class="testimonial-text">"Reliable and thorough. They really pay attention to the details. My Airbnb reviews have mentioned how clean the place is."</p>
+                    <p class="testimonial-author">James</p>
+                    <p class="testimonial-location">Hull</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"></path></svg>
+                    </div>
+                    <p class="testimonial-text">"Needed a last-minute clean and they fit me in. Great communication throughout. Five stars."</p>
+                    <p class="testimonial-author">Michelle</p>
+                    <p class="testimonial-location">Cottingham</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section areas" id="areas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Service Areas</span>
+                <h2 class="section-title">Where We Work</h2>
+                <p class="section-subtitle">Proudly serving Hull and surrounding areas in East Yorkshire.</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-tag">Hull City Centre</div>
+                <div class="area-tag">Anlaby</div>
+                <div class="area-tag">Hessle</div>
+                <div class="area-tag">Cottingham</div>
+                <div class="area-tag">Beverley</div>
+                <div class="area-tag">Willerby</div>
+                <div class="area-tag">Brough</div>
+                <div class="area-tag">Kingswood</div>
+                <div class="area-tag">Sutton-on-Hull</div>
+                <div class="area-tag">Hedon</div>
+                <div class="area-tag">Bilton</div
